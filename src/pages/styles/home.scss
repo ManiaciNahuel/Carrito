@@ -1,0 +1,14 @@
+.Item-img {
+    width: 150px;
+    height: 150px;
+};
+
+.Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+        list-style: none;
+        padding: 15px;
+    }
+}
