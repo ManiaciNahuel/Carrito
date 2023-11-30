@@ -19,19 +19,37 @@ export function Filters() {
         }))
     }
 
+    const handleColor = (event) => {
+        setFilters(prevState => ({
+            ...prevState, 
+            color: event.target.value
+        }))
+    }
+
     return (
         <section className="filters">
             <div>
                 <label htmlFor="price">Price</label>
-                <input type="range" id="price" min='350' max='650' onChange={handleMinPrice} value={filters.minPrice}/>
+                <input type="range" id="price" min='300' max='750' onChange={handleMinPrice} value={filters.minPrice}/>
                 <span>${filters.minPrice}</span>
             </div>
             <div>
                 <label htmlFor="category">Category</label>
                 <select id="category" onChange={handleCategory}>
                     <option value="all">All</option>
-                    <option value="CD">CD</option>
-                    <option value="Vinyl">Vinyl</option>
+                    <option value="Armless">Armless</option>
+                    <option value="Armchair">Armchair</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="category">Color</label>
+                <select id="color" onChange={handleColor}>
+                    <option value="all">All</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                    <option value="sand">Sand</option>
+                    <option value="grey">Grey</option>
                 </select>
             </div>
         </section>

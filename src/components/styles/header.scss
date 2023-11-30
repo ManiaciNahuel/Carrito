@@ -1,4 +1,11 @@
-h1 {
-    display: flex;
-    justify-content: center;
+header {
+    background-color: #fa8b69db;
+    position: relative;
+    top: 0;
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-block: 0;
+        padding: 10px;
+    }
 }

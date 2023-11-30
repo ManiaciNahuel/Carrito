@@ -2,69 +2,86 @@
 export const productList = [
    {
       id:'1',
-      name:'K.I.D.S.',
-      price:540,
-      image:'https://i.postimg.cc/NMy9711j/d515de5c8f680fb7ad588d1f0fc48fde.jpg',
+      name:'Tulip Armless',
+      price: 300,
+      image:'https://i.postimg.cc/G29KwCWn/151.jpg',
       stock:8,
-      year:'2010',
-      category:"CD"
+      color:'yellow',
+      category:"Armless"
    },
    {
       id:'2',
-      name:'Faces',
-      price:650,
-      image:'https://i.postimg.cc/prKP8Hxk/Mac-Miller-Faces-2021.jpg',
-      stock:6,
-      year:'2014',
-      category:"CD"
+      name:'Tulip Armless',
+      price: 300,
+      image:'https://i.postimg.cc/XNfGjh4R/151.jpg',
+      stock:8,
+      color:'grey',
+      category:"Armless"
    },
    {
       id:'3',
-      name:'The Divine Feminine',
-      price:350,
-      image:'https://i.postimg.cc/j2dP5SfC/The-Divine-Feminine.jpg',
+      name:'Tulip Upholstered',
+      price: 500,
+      image:'https://i.postimg.cc/FsFR9HPS/150.jpg',
       stock:6,
-      year:'2016',
-      category:"Vinyl"
+      color:'red',
+      category:"Armchair"
    },
    {
       id:'4',
-      name:'Swimming',
-      price:500,
-      image:'https://i.postimg.cc/KjqLgh7f/Swimming.jpg',
+      name:'Tulip Upholstered',
+      price: 500,
+      image:'https://i.postimg.cc/02tNr13B/150.jpg',
       stock:8,
-      year:'2018',
-      category:"Vinyl"
+      color:'purple',
+      category:"Armchair"
    },
    {
       id:'5',
-      name:'Circles',
-      price:400,
-      image:'https://i.postimg.cc/9XJyky39/Circles.jpg',
+      name:'Tulip Armchair',
+      price: 400,
+      image:'https://i.postimg.cc/nLmVdjLy/150A.jpg',
       stock:10,
-      year:'2020',
-      category:"CD"
+      color:'sand',
+      category:"Armchair"
    },
    {
       id:'6',
-      name:'GO:OD AM',
-      price:470,
-      image:'https://i.postimg.cc/8cR01mK4/GO-OD-AM-by-Mac-Miller.jpg',
+      name:'Tulip Armchair',
+      price: 400,
+      image:'https://i.postimg.cc/kgn0B7s1/150A.jpg',
       stock:5,
-      year:'2015',
-      category:"Vinyl"
+      color:'red',
+      category:"Armchair"
+   },
+   {
+      id:'7',
+      name:'Saarinen Executive',
+      price: 750,
+      image:'https://i.postimg.cc/JhxYCKtZ/72CW.jpg',
+      stock:5,
+      color:'sand',
+      category:"Armless"
+   },
+   {
+      id:'8',
+      name:'Saarinen Executive',
+      price: 750,
+      image:'https://i.postimg.cc/L5cN3b0K/72CW.jpg',
+      stock:5,
+      color:'green',
+      category:"Armless"
+   },
+   {
+      id:'9',
+      name:'Tulip Armchair',
+      price: 400,
+      image:'https://i.postimg.cc/yx7NdwbF/150A.jpg',
+      stock:5,
+      color:'yellow',
+      category:"Armchair"
    }
 ]
 
 
 
-export const getProducts = (id) => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const query = id ? productList.find(producto => producto.id === id) : productList
-      resolve(query)
-    }, 0)
-  })
-}
-
-  

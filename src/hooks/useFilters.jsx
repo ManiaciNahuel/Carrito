@@ -10,6 +10,8 @@ export function useFilters () {
       return (
         prod.price >= filters.minPrice && (
           filters.category === 'all' || prod.category === filters.category
+        ) && (
+          filters.color === 'all' || prod.color === filters.color
         )
       )
     })

@@ -27,19 +27,43 @@ export function CartProvider({ children }) {
         ]))
     }
 
-    const removeFromCart = product => {/* 
+        /*
         setCart(prevState => prevState.filter(item => item.id == !product.id)) */
+    const removeFromCart = product => {
         const newCart = [...cart];
-        let index = newCart.findIndex((product) => product.id === product.id);
+        let index = newCart.findIndex((producto) => product.id === producto.id);
         
-        cart[index].amount > 1 ?
-            cart[index].amount = (cart[index].amount) - 1 :
-            newCart.splice(index,1);
-        setCart([...newCart])
+        
+            if (confirmDelete()) {
+            newCart.splice(index, 1);}
+        
+        setCart([...newCart]);
+    }
+    
+    const confirmDelete = () => window.confirm("Are you sure you want to delete this product?");
+
+    const confirmClearCart = () => window.confirm("Are you sure you want to clear your cart?");
+
+    const removeOne = product => { 
+        const newCart = [...cart]
+        let index = newCart.findIndex((producto) => product.id === producto.id);
+
+        if (newCart[index].quantity > 1) {
+            newCart[index].quantity -= 1
+        } else {
+            if (confirmDelete()) {
+                newCart.splice(index, 1);
+            }
+        }
+
+        setCart(newCart)
     }
 
+
     const clearCart = () => {
-        setCart([])
+        if (confirmClearCart()) {
+            setCart([])
+        }
     }
 
     return (
@@ -47,6 +71,7 @@ export function CartProvider({ children }) {
             cart, 
             addToCart,
             removeFromCart,
+            removeOne,
             clearCart
         }}>
         

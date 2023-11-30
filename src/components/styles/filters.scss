@@ -1,11 +1,11 @@
 .filters {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 17px;
     div {
         display: flex;
         gap: 1rem;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
     }
 }

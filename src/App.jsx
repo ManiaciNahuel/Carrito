@@ -8,6 +8,7 @@ import { Cart } from './components/Cart';
 import { CartProvider } from './context/cart';
 import { HomeProducts } from './pages/HomeProducts';
 import { Footer } from './components/Footer';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 
 
@@ -18,12 +19,17 @@ function App() {
   const filteredProducts = filterProducts(productList)
   
   return (
-    <CartProvider>
+    <BrowserRouter>
+      <CartProvider>
       <Header />
+        <Routes>
+          <Route  path="/*" element = { <Navigate to='/' replace /> }/>
+        </Routes>
       <Cart />
       <HomeProducts products={filteredProducts} />
       <Footer />
     </CartProvider>
+    </BrowserRouter>
   );
 }
 
